@@ -82,6 +82,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   capybara
+  dotenv
   hanami (= 0.7.3)
   hanami-model (~> 0.5)
   minitest
