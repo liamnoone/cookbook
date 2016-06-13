@@ -1,0 +1,10 @@
+<h2>All Recipies</h2>
+
+<div id="recipies">
+  <% recipies.each do |recipe| %>
+    <div class="recipe">
+      <h3><%= recipe.name %></h3>
+      <p><%= recipe.description %></p>
+    </div>
+  <% end %>
+</div>

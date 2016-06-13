@@ -1,0 +1,36 @@
+<h2>Add Recipe</h2>
+
+<% unless params.valid? %>
+  <div class="errors">
+    <h3>There was a problem submitting your recipe</h3>
+    <ul>
+      <% params.errors.each do |error| %>
+        <li><%= error.attribute_name %> is required</li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%=
+
+  form_for :recipe, '/recipies' do
+    div class: 'input' do
+      label :name
+      text_field :name
+    end
+
+    div class: 'input' do
+      label :description
+      text_field :description
+    end
+
+    div class: 'input' do
+      label :content
+      text_field :content
+    end
+
+    div class: 'controls' do
+      submit 'File Recipe'
+    end
+  end
+
+%>
